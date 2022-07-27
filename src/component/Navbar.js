@@ -10,45 +10,52 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <div className='header'>
-      <div className='nav'>
-        <div className='logo-container'>
-          <a href="#">
+    <div className={click ? 'header active' : 'header'}>
+      <div id='hover'>
+        <div className={click ? 'top-nav active' : 'top-nav'}>
+          <ul className='social-container'>
+            <li>
+              <div className='nav-link' href="#" ><GrFacebookOption className='social-icon' /></div>
+            </li>
+            <li>
+              <div className='nav-link' href='#'><AiOutlineMail className='social-icon' /></div>
+            </li>
+          </ul>
+          <h2 className='logo' href="#">
             LOANN
-          </a>
-        </div>    
-      
+          </h2>
+          <div className='btn-container'>
+            Book Appointment
+          </div>
+
+          <div className='menu-icon' onClick={handleClick}>
+            {click ? (
+              <HiOutlineX className="menu-icon" />
+            ) : (
+              <HiOutlineMenu className="menu-icon" />
+            )}
+          </div>
+        </div>
+
+        <div className='nav-container'>
+
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className='option' onClick={closeMobileMenu}>
-            <a href='#'>Home</a>
+            <p className='nav-link' href='#'>Home</p>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <a href='#'>Service menu</a>
+            <p className='nav-link' href='#'>Gallery</p>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <a href='#'>Gallery</a>
+            <p className='nav-link' href='#'>Service menu</p>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <a href='#'>Contact</a>
+            <p className='nav-link' href='#'>Contact</p>
           </li>
         </ul>
 
-        <ul className='social-container'>
-          <li>
-            <a href="#" ><GrFacebookOption className='social-icon'/></a>
-          </li>
-          <li>
-            <a href='#'><AiOutlineMail className='social-icon'/></a>
-          </li>
-        </ul>
+      </div>
 
-        <div id='menu-icon' onClick={handleClick}>
-          {click ? (
-            <HiOutlineMenu className="menu-icon" />
-          ) : (
-            <HiOutlineX className="menu-icon" />
-          )}
-        </div>
       </div>
     </div>
   );
