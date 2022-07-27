@@ -4,13 +4,50 @@
 }
 
 .home-splash {
-  height: 75%;
+  height: 50%;
   width: 100%;
+  position: relative;
 }
 
 .hero{
   background-image: url(../../public/imgs/home-hero.jpg);
   background-size: cover;
+  background-clip: content-box;
   height: 100%;
   width: 100%;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.hero-title-container {
+  border: red 1px solid;
+  width: 80%;
+  margin: auto;
+}
+
+.hero-title {
+  color: white;
+  font-size: 3rem;
+}
+
+.btn-container{
+  background-color: transparent;
+  flex-direction: end;
+  padding-right: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@media (max-width: 649px) {
+  .hero-title-container {
+    color: white;
+    font-size: 1.5rem;
+    border: red 1px solid;
+    width: 80%;
+    margin: auto;
+  }
 }
