@@ -1,0 +1,16 @@
+.home-container {
+  height: 100vw;
+  width: 100vw;
+}
+
+.home-splash {
+  height: 75%;
+  width: 100%;
+}
+
+.hero{
+  background-image: url(../../public/imgs/home-hero.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
