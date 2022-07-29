@@ -1,0 +1,168 @@
+{
+  "basic_info": [
+    {
+      "CONTACT": ["1.800.123.1234", "hairbyloan@yahoo.com"]
+    },
+    {
+      "HOURS": [
+        {
+          "day": "Mon to Fri",
+          "time": "8:00am - 1:00pm"
+        }, 
+        {
+          "Sat": "10:00am - 1:00pm"
+        }, 
+        {
+          "Sun": "9:00am - 11:00pm"
+        }
+      ]
+    },
+    {
+      "LOCATION": "12 Brady Way Ave, Dallas, TX, 10987 United States"
+    }
+  ],
+  "services": [
+    {
+      "title": "Clipper Cut",
+      "price": "30",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "30 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Signature Haircut",
+      "price": "49",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1 hr 15 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Bang Trim",
+      "price": "19",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "15 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Haircut",
+      "price": "19",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "60 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Kids Haircut",
+      "price": "20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "30 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Haircut",
+      "price": "19",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "60 min",
+      "serviceType": "HAIRCUT"
+    },
+    {
+      "title": "Brush",
+      "price": "25",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "30 min",
+      "serviceType": "STYLING"
+    },
+    {
+      "title": "Curly Brush",
+      "price": "28",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "30 min",
+      "serviceType": "STYLING"
+    },
+    {
+      "title": "Light Hair Styling",
+      "price": "44",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1 hr 15 min",
+      "serviceType": "STYLING"
+    },
+    {
+      "title": "Curly Hair",
+      "price": "38",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "30 min",
+      "serviceType": "STYLING"
+    },
+    {
+      "title": "Balayage",
+      "price": "150",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1hr 30 min",
+      "serviceType": "COLOUR"
+    },
+    {
+      "title": "Bleach & Tone",
+      "price": "90",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "60 min",
+      "serviceType": "COLOUR"
+    },
+    {
+      "title": "One Color",
+      "price": "80",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1hr 15 min",
+      "serviceType": "COLOUR"
+    },
+    {
+      "title": "Foliage",
+      "price": "110",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1hr",
+      "serviceType": "COLOUR"
+    },
+    {
+      "title": "Olaplex",
+      "price": "25",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "20 min",
+      "serviceType": "TREATMENT"
+    },
+    {
+      "title": "Orising Treatment",
+      "price": "28",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "60 min",
+      "serviceType": "TREATMENT"
+    },
+    {
+      "title": "Label Treatment",
+      "price": "80",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "time": "1 hr 15 min",
+      "serviceType": "TREATMENT"
+    }
+],
+
+"about_loan": {
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum enim facilisis gravida neque convallis a cras. Eu volutpat odio facilisis mauris. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Sit amet tellus cras adipiscing enim eu. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Massa id neque aliquam vestibulum morbi blandit cursus risus at. Justo nec ultrices dui sapien eget. Adipiscing enim eu turpis egestas pretium. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Risus commodo viverra maecenas accumsan lacus. Dignissim enim sit amet venenatis urna cursus. Pellentesque pulvinar pellentesque habitant morbi tristique. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Amet luctus venenatis lectus magna fringilla urna porttitor. Tellus orci ac auctor augue mauris augue. Elementum integer enim neque volutpat ac.",
+  "education_experience": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum enim facilisis gravida neque convallis a cras. Eu volutpat odio facilisis mauris. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Sit amet tellus cras adipiscing enim eu. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Massa id neque aliquam vestibulum morbi blandit cursus risus at. Justo nec ultrices dui sapien eget. Adipiscing enim eu turpis egestas pretium. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Risus commodo viverra maecenas accumsan lacus. Dignissim enim sit amet venenatis urna cursus. Pellentesque pulvinar pellentesque habitant morbi tristique. Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Amet luctus venenatis lectus magna fringilla urna porttitor. Tellus orci ac auctor augue mauris augue. Elementum integer enim neque volutpat ac."
+},
+
+"skills": [
+  {
+    "icon": "gloab",
+    "type": "Personalized Experience",
+    "description": "Each guest is our favourite guest. Come and make sure that our service is exceptional."
+  },
+  {
+    "icon": "gloab",
+    "type": "Professional Care",
+    "description": "All products we use are professional and have proven effeciency. No compromises."
+  },
+  {
+    "icon": "gloab",
+    "type": "Wa Love What We Do",
+    "description": "People that you’ll meet in our studio are doing job they love. Come and make sure there is a difference."
+  }
+]
+}
