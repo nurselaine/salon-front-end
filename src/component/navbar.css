@@ -13,12 +13,6 @@
       color: black;
     } */
 
-  #hover:hover{
-    background-color: white;
-    color: black !important;
-    /* how to make all text in hover div black  */
-  }
-
   .top-nav {
     display: flex;
     color: white;
@@ -35,6 +29,7 @@
     justify-content: start;
     margin-top: auto;
     margin-bottom: auto;
+    margin-top: 10px;
     /* border: 1px red solid; */
   }
     .social-icon{
@@ -49,18 +44,22 @@
     text-decoration: none;
     text-align: center;
   }
+    h2.logo{
+      margin-top: 10px;
+    }
   
 
   .btn-container{
-    background-color: transparent;
-    flex-direction: end;
+    /* background-color: transparent; */
+    /* flex-direction: end; */
     padding-right: 50px;
-    margin-top: auto;
+    margin-top: 30px;
     margin-bottom: auto;
   }
   
   .nav-container {
     width: 100%;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -106,10 +105,19 @@
     color: white;
   }
 
+  .menu-icon{
+    display: none;
+  }
+
   
   .option :hover {
     color: white;
   }
+
+/* Tablet view */
+@media (max-width: 768px){
+  
+}
 
 /* mobile view */
 @media (max-width: 649px) {
@@ -123,6 +131,9 @@
     background-color: white;
     color: black;
   }
+    .top-nav{
+      border-bottom: none;
+    }
 
   .social-container{
     display: none;
@@ -132,9 +143,15 @@
     display: none;
   }
 
-  .logo {
+  h2.logo {
     width: 45px;
     height: 45px;
+    padding:0;
+  }
+
+  .nav-container{
+    border-bottom: none;
+    margin-top: inherit;
   }
 
   .nav-options {
@@ -162,9 +179,14 @@
   }
 
   .menu-icon {
-    width: 45px;
-    height: 45px;
+    display: block;
+    margin-right: 10px;
+    margin-top: 10px;
   }
+    .nav-icon{
+      width: 25px;
+      height: 25px;
+    }
 
   .option {
     display: flex;

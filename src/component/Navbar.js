@@ -30,9 +30,9 @@ const Navbar = () => {
 
           <div className='menu-icon' onClick={handleClick}>
             {click ? (
-              <HiOutlineX className="menu-icon" />
+              <HiOutlineX className='nav-icon'/>
             ) : (
-              <HiOutlineMenu className="menu-icon" />
+              <HiOutlineMenu className='nav-icon' />
             )}
           </div>
         </div>

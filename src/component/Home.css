@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.hero{
+.hero {
   background-image: url(../../public/imgs/home-hero.jpg);
   background-size: cover;
   background-clip: content-box;
@@ -24,30 +24,84 @@
 }
 
 .hero-title-container {
-  border: red 1px solid;
-  width: 80%;
+  /* border: red 1px solid; */
+  width: 60%;
   margin: auto;
 }
 
 .hero-title {
   color: white;
   font-size: 3rem;
+  font-weight: 500;
+  font-family: ui-serif;
+  margin-top: 80px;
+  text-align: center;
 }
 
-.btn-container{
+.hero-btn-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+#book-btn {
+  margin: 1rem 1.5rem;
+  border-radius: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#book-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+#book-btn2 {
+  margin: 1rem 1.5rem;
+  border-radius: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#book-btn2:hover {
   background-color: transparent;
-  flex-direction: end;
-  padding-right: 50px;
-  margin-top: auto;
-  margin-bottom: auto;
+  color: white;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 649px) {
   .hero-title-container {
     color: white;
-    font-size: 1.5rem;
-    border: red 1px solid;
-    width: 80%;
-    margin: auto;
+    /* border: red 1px solid; */
+    width: 60%;
+    margin-top: 0;
+  }
+
+  div.hero-title {
+    font-size: 0.75rem;
+    margin-top: 0px;
+  }
+
+  .hero-btn-container {
+    margin: 0;
+  }
+
+  #book-btn {
+    font-size: 0.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0.5rem;
+  }
+
+  #book-btn2 {
+    font-size: 0.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0.5rem;
   }
 }
