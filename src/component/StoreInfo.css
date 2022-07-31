@@ -1,0 +1,22 @@
+table {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+thead {
+  text-align: center;
+}
+
+th:last-child div {
+  margin: auto;
+  width: 50%;
+}
+
+th:last-child {
+  width: 30%;
+}
+
+.info-header {
+  font-weight: 600;
+}
