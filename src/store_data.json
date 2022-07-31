@@ -1,24 +1,20 @@
 {
   "basic_info": [
     {
-      "CONTACT": ["1.800.123.1234", "hairbyloan@yahoo.com"]
+      "title": "CONTACT",
+      "description": ["1.800.123.1234", "hairbyloan@yahoo.com"]
     },
     {
-      "HOURS": [
-        {
-          "day": "Mon to Fri",
-          "time": "8:00am - 1:00pm"
-        }, 
-        {
-          "Sat": "10:00am - 1:00pm"
-        }, 
-        {
-          "Sun": "9:00am - 11:00pm"
-        }
+      "title": "HOURS",
+      "description": [      
+          "Mon to Fri: 8:00am — 1:00pm", 
+          "Sat: 10:00am — 1:00pm", 
+          "Sun: 9:00am — 11:00pm"
       ]
     },
     {
-      "LOCATION": "12 Brady Way Ave, Dallas, TX, 10987 United States"
+      "title": "LOCATION",
+      "description": ["12 Brady Way Ave, Dallas, TX, 10987 United States"]
     }
   ],
   "services": [
