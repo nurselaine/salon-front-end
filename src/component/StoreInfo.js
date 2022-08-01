@@ -5,15 +5,14 @@ import data from '../store_data.json';
 const StoreInfo = () => {
   let storeData = data.basic_info;
 
-  console.log(data.basic_info);
   return (
     <table>
       <thead>
         <tr>
           {
-            storeData.map(obj => {
+            storeData.map((obj, i) => {
               return (
-              <th className='info-header'>{obj.title}</th>
+              <th key={i} className='info-header'>{obj.title}</th>
               )
             })
           }
@@ -22,12 +21,12 @@ const StoreInfo = () => {
       <tbody>
         <tr>
           {
-            storeData.map(obj => {
+            storeData.map((obj, i) => {
               return (
-                <th>
-                  {obj.description.map(detail => {
+                <th key={i}>
+                  {obj.description.map((detail, i) => {
                     return (
-                      <div>{detail}</div>
+                      <div key={i}>{detail}</div>
                     )
                   })}
                 </th>

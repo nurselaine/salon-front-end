@@ -4,6 +4,8 @@ import './Home.css';
 import Button from 'react-bootstrap/Button';
 import StoreInfo from './StoreInfo';
 import ServiceMenu from './ServiceMenu';
+import AboutSection from './AboutSection';
+import data from '../store_data.json';
 
 const Home = () => {
   return (
@@ -23,12 +25,25 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id='basic-info-section' >
-          <StoreInfo />
-      </div>
-      <div className='service-menu-container'>
+      <section id='basic-info-section' >
+        <StoreInfo />
+      </section>
+      <section className='service-menu-container'>
         <ServiceMenu />
-      </div>
+        <div id='service-btn-container'>
+          <Button id='book-btn3' variant="dark">BOOK APPOINTMENT</Button>
+        </div>
+      </section>
+      <section className='about-section-container'>
+        <AboutSection url='../../public/imgs/loann-image.jpg' alt='photo of Loann' data={data.about_loan.bio} direction='row'/>
+      </section>
+      <section>
+        <h1>Link to add reviews</h1>
+      </section>
+
+      <section className='about-section-container'>
+        <AboutSection url='../../public/imgs/candle-flower.jpg' alt='photo of candle' data={data.about_loan.bio} direction='row-reverse'/>
+      </section>
     </div>
   )
 }
