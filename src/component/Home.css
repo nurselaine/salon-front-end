@@ -114,6 +114,10 @@
 }
 
 @media (max-width: 900px) {
+  .home-splash{
+    height: 400px;
+  }
+
   .hero-title {
     color: white;
     font-size: 1.5rem;
@@ -122,29 +126,39 @@
     margin-top: 40px;
     text-align: center;
   }
+
   .hero-btn-container {
     margin-top: 30px;
   }
+
   #book-btn{
     margin: 0.5rem 1rem;
   }
+
   #book-btn2{
     margin: 0.5rem 1rem;
   }
+
   #book-btn3 {
     margin: 0.5rem 1rem;
   }
-  /* .basic-info-container {
-    display: none;
-  } */
+
   .basic-info-section .active {
     background-color: #f5e1d3;
     display: block;
+  }
+
+  .service-menu-container{
+    width: 80%;
   }
 }
 
 /* Tablet view */
 @media (max-width: 650px) {
+  .home-splash{
+    height: 360px;
+  }
+
   .hero-title-container {
     color: white;
     /* border: red 1px solid; */
@@ -178,6 +192,7 @@
   .basic-info-container {
     display: none;
   }
+
 }
 
 /* @media (max-width: 600px) {

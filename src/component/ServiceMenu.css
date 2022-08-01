@@ -15,10 +15,6 @@
   margin-bottom: 30px;
 }
 
-/* button#uncontrolled-tab-example-tab-STYLING{
-  color:black;
-} */
-
 button.nav-link{
   color:black;
 }
@@ -47,4 +43,15 @@ button.nav-link{
 #service-accordion-item {
   border: none;
   border-bottom: 1px #dee2e6 solid;
+}
+
+
+@media (max-width: 650px) {
+  .service-menu-container{
+    width: 100%;
+  }
+
+  .service-title{
+    font-size: 2rem;
+  }
 }
