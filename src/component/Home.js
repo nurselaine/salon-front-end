@@ -24,10 +24,13 @@ const Home = () => {
         </div>
       </div>
       <div id='basic-info-section' >
-          <StoreInfo />
+        <StoreInfo />
       </div>
       <div className='service-menu-container'>
         <ServiceMenu />
+        <div id='service-btn-container'>
+          <Button id='book-btn3' variant="dark">BOOK APPOINTMENT</Button>
+        </div>
       </div>
     </div>
   )

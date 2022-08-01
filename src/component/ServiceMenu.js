@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import data from '../store_data.json';
 import ServiceAccordion from './ServiceAccordion';
+import './ServiceMenu.css';
 
 const ServiceMenu = () => {
   const services = data.services;
@@ -28,26 +29,26 @@ const ServiceMenu = () => {
   }
 
   return (
-    <div>
-      <div>Service Menu</div>
+    <div className='service-menu'>
+      <div className='service-title'>Service Menu</div>
       <Tabs
         defaultActiveKey='HAIRCUT'
         id='uncontrolled-tab-example'
         className='mb-3'
       >
-        <Tab eventKey='HAIRCUT' title='HAIRCUT'>
+        <Tab className='service-option' eventKey='HAIRCUT' title='HAIRCUT'>
           <ServiceAccordion data={getHaircutData()} />
 
         </Tab>
-        <Tab eventKey='STYLING' title='STYLING'>
-          <ServiceAccordion data={getHaircutData()} />
+        <Tab className='service-option' eventKey='STYLING' title='STYLING'>
+          <ServiceAccordion data={getStylingData()} />
 
         </Tab>
-        <Tab eventKey='COLOUR' title='COLOUR'>
-          <ServiceAccordion data={getHaircutData()} />
+        <Tab className='service-option' eventKey='COLOUR' title='COLOUR'>
+          <ServiceAccordion data={getColourData()} />
         </Tab>
-        <Tab eventKey='TREATMENT' title='TREATMENT'>
-          <ServiceAccordion data={getHaircutData()} />
+        <Tab className='service-option' eventKey='TREATMENT' title='TREATMENT'>
+          <ServiceAccordion data={getTreatmentData()} />
         </Tab>
       </Tabs>
     </div>

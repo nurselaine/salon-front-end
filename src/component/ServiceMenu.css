@@ -1,0 +1,50 @@
+.service-menu{
+  margin-top: 90px;
+}
+
+.service-menu-container {
+  width: 50%;
+  margin: auto;
+}
+
+.service-title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: ui serif;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* button#uncontrolled-tab-example-tab-STYLING{
+  color:black;
+} */
+
+button.nav-link{
+  color:black;
+}
+
+#service-title{
+  font-weight: 600;
+}
+#service-price {
+  margin-left: auto;
+  font-weight: 600;
+}
+#service-description{
+  font-weight: 100;
+}
+
+.accordion-button::after{
+  display: none;
+}
+
+.accordion-btn{
+  padding-left: 5px;
+  width: 20px;
+  height:20px;
+}
+
+#service-accordion-item {
+  border: none;
+  border-bottom: 1px #dee2e6 solid;
+}

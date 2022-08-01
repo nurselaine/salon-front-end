@@ -6,7 +6,7 @@
 }
 
 .home-splash {
-  height: 50%;
+  height: 760px;
   width: 100%;
   position: relative;
 }
@@ -77,6 +77,18 @@
   display: none;
 }
 
+#service-btn-container {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+  #book-btn3 {
+    margin: 1rem 1.5rem;
+    border-radius: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
 /* laptop view */
 @media (max-width: 1250px){
   .basic-info-container {
@@ -117,6 +129,9 @@
     margin: 0.5rem 1rem;
   }
   #book-btn2{
+    margin: 0.5rem 1rem;
+  }
+  #book-btn3 {
     margin: 0.5rem 1rem;
   }
   /* .basic-info-container {
