@@ -9,7 +9,7 @@ const AboutSection = (props) => {
       </div>
       <div className='section-info-container'>
         <div className='section-info'>
-          <h3>Loann's Story</h3>
+          <h3>{props.title}</h3>
           <p>{props.data}</p>
         </div>
       </div>
