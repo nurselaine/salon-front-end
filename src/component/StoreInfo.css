@@ -1,3 +1,25 @@
+.store-data-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: visible;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+.info-container{
+  text-align: center;
+  padding: 30px;
+}
+.title-container{
+  font-weight: 600;
+}
+.info-container:last-child .details-container{
+  width: 200px;
+  margin: auto;
+}
+
 table {
   text-align: center;
   margin: auto;
