@@ -16,7 +16,7 @@
   .top-nav {
     display: flex;
     color: white;
-    border-bottom: 1px white solid;
+    border-bottom: 1px rgba(195, 195, 195, 0.231) solid;
     /* border: 1px red solid; */
   }
     /* .top-nav:hover{
@@ -39,10 +39,12 @@
   h2 {
     /* border: 1px red solid; */
     margin: auto;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: larger;
     text-decoration: none;
     text-align: center;
+    font-family: ui-serif;
+    font-weight: 200;
   }
     h2.logo{
       margin-top: 10px;
@@ -53,17 +55,17 @@
     /* background-color: transparent; */
     /* flex-direction: end; */
     padding-right: 50px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: auto;
   }
   
   .nav-container {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px white solid;
+    border-bottom: 1px rgba(195, 195, 195, 0.231) solid;
     color: white;
   }
     /* .nav-container:hover {
@@ -86,7 +88,8 @@
     padding-left: 25px;
     display: flex;
     list-style-type: none;
-    margin: auto;
+    margin-bottom: 10px;
+
   }
     /* .nav-options:hover{
       color:black;
@@ -212,6 +215,7 @@
     width: 45px;
     height: 45px;
     padding:0;
+    margin-top: 20px;
   }
 
   .nav-container{
@@ -241,14 +245,15 @@
     z-index: 1;
     align-content: center;
     padding-left: 0;
+    color: black;
   }
 
   .menu-icon {
     display: block;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
   }
-    .nav-icon{
+    svg.nav-icon{
       width: 25px;
       height: 25px;
     }

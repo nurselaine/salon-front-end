@@ -158,11 +158,14 @@
 
   .hero-title {
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
     font-family: ui-serif;
-    margin-top: 80px;
+    margin-top: 150px;
     text-align: center;
+  }
+  .hero-btn-container{
+    margin-top: 90px;
   }
 
   #basic-info-section {
