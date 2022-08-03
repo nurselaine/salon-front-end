@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { HiOutlineMenu, HiOutlineX, HiOutlineCube } from 'react-icons/hi';
+import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiOutlineMail } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
             LOANN
           </h2>
           <div className='btn-container'>
-            Book Appointment
+          <Link className='nav-link' to='/contact'>Book Appointment</Link>
           </div>
 
           <div className='menu-icon' onClick={handleClick}>
@@ -41,16 +42,20 @@ const Navbar = () => {
 
         <ul className={click ? "nav-options active" : "nav-options"}>
           <li className='option' onClick={closeMobileMenu}>
-            <p className='nav-link' href='#'>Home</p>
+            {/* <p className='nav-link' href='#'>Home</p> */}
+            <Link className='nav-link' to='/'>Home</Link>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <p className='nav-link' href='#'>Gallery</p>
+            {/* <p className='nav-link' href='#'>Gallery</p> */}
+            <Link className='nav-link' to='/gallery'>Gallery</Link>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <p className='nav-link' href='#'>Service menu</p>
+            {/* <p className='nav-link' href='#'>Service menu</p> */}
+            <Link className='nav-link' to='/service-menu'>Service Menu</Link>
           </li>
           <li className='option' onClick={closeMobileMenu}>
-            <p className='nav-link' href='#'>Contact</p>
+            {/* <p className='nav-link' href='#'>Contact</p> */}
+            <Link className='nav-link' to='/contact'>Contact</Link>
           </li>
         </ul>
 

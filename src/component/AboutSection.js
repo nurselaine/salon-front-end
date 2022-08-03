@@ -2,7 +2,6 @@ import React from 'react';
 import './AboutSection.css';
 
 const AboutSection = (props) => {
-  console.log(props.url);
   return (
     <div className={props.direction === 'row' ? 'section-container' : 'section2-container'}>
       <div className={props.direction === 'row' ? 'photo-container' : 'photo2-container'}>

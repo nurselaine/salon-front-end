@@ -5,8 +5,10 @@ import Button from 'react-bootstrap/Button';
 import StoreInfo from './StoreInfo';
 import ServiceMenu from './ServiceMenu';
 import AboutSection from './AboutSection';
+import AppointmentForm from './AppointmentForm';
+import { Link } from 'react-router-dom';
 import data from '../store_data.json';
-import {BsSuitHeart} from 'react-icons/bs'
+import {BsSuitHeart} from 'react-icons/bs';
 
 const Home = () => {
   return (
@@ -17,8 +19,8 @@ const Home = () => {
           <div className='hero-title-container'>
             <div className='hero-title'>It Doesn't Matter If Your Life is Perfect as Long as Your Hair Color is.</div>
             <div className='hero-btn-container'>
-              <Button id='book-btn' variant="outline-light">BOOK APPOINTMENT</Button>
-              <Button id='book-btn2' variant="light">VIEW SERVICE MENU</Button>
+              <Button id='book-btn' variant="outline-light"><Link className='nav-link' to='/contact'>BOOK APPOINTMENT</Link></Button>
+              <Button id='book-btn2' variant="light"><Link className='nav-link' to='/service-menu'>VIEW SERVICE MENU</Link></Button>
             </div>
           </div>
           <div className='basic-info-container' >
@@ -72,7 +74,9 @@ const Home = () => {
           title="Experience & Education" 
           direction='row-reverse'/>
       </section>
-
+      <section>
+        <AppointmentForm id='book-appt'/>
+      </section>
     </div>
   )
 }
