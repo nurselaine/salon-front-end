@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import './Home.css';
 import Button from 'react-bootstrap/Button';
@@ -6,11 +6,20 @@ import StoreInfo from './StoreInfo';
 import ServiceMenu from './ServiceMenu';
 import AboutSection from './AboutSection';
 import AppointmentForm from './AppointmentForm';
+import ReviewForm from './ReviewForm';
+import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import data from '../store_data.json';
-import {BsSuitHeart} from 'react-icons/bs';
+import { BsSuitHeart } from 'react-icons/bs';
 
 const Home = () => {
+
+  const [showReviewForm, setShowReviewForm] = useState(false);
+
+  const closeReviewForm = () => {
+    setShowReviewForm(false);
+  }
+
   return (
     <div className='home-container'>
       <div className='home-splash'>
@@ -38,12 +47,12 @@ const Home = () => {
         </div>
       </section>
       <section className='about-section-container'>
-        <AboutSection 
-          url='../../public/imgs/loann-image.jpg' 
-          alt='photo of Loann' 
-          data={data.about_loan.bio} 
-          title="Loann's Story" 
-          direction='row'/>
+        <AboutSection
+          url='../../public/imgs/loann-image.jpg'
+          alt='photo of Loann'
+          data={data.about_loan.bio}
+          title="Loann's Story"
+          direction='row' />
       </section>
       <section className='gallery-section'>
         <h1 className='gallery-title'>Gallery</h1>
@@ -58,25 +67,40 @@ const Home = () => {
         </div>
         <div className='review-btn-container'>
           <div className='review-info'>
-            <BsSuitHeart/>
-            <BsSuitHeart/>
+            <BsSuitHeart />
+            <BsSuitHeart />
             <p>Please send us a review telling us a bit about your experience. Add a picture of your beautiful hair too!</p>
           </div>
-        <Button id='book-btn4' variant="outline-dark">ADD A REVIEW</Button>
+          <Button
+            id='book-btn4'
+            variant="outline-dark"
+            onClick={() => { setShowReviewForm(true) }}
+          >ADD A REVIEW
+          </Button>
+          {
+            showReviewForm &&
+              <ReviewForm handleFormClose={closeReviewForm}/>
+          }
         </div>
       </section>
 
       <section className='about-section-container'>
-        <AboutSection 
-          url='../../public/imgs/candle-flower.jpg' 
-          alt='photo of candle' 
-          data={data.about_loan.education_experience} 
-          title="Experience & Education" 
-          direction='row-reverse'/>
+        <AboutSection
+          url='../../public/imgs/candle-flower.jpg'
+          alt='photo of candle'
+          data={data.about_loan.education_experience}
+          title="Experience & Education"
+          direction='row-reverse' />
       </section>
       <section>
-        <AppointmentForm id='book-appt'/>
+        <AppointmentForm id='book-appt' />
       </section>
+      <section id='basic-info-section2' >
+        <StoreInfo />
+      </section>
+      <div>
+        <Footer/>
+      </div>
     </div>
   )
 }

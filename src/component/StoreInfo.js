@@ -24,36 +24,6 @@ const StoreInfo = () => {
         )
       })}
     </div>
-    // <table>
-    //   <thead>
-    //     <tr>
-    //       {
-    //         storeData.map((obj, i) => {
-    //           return (
-    //           <th key={i} className='info-header'>{obj.title}</th>
-    //           )
-    //         })
-    //       }
-    //     </tr>
-    //   </thead>
-    //   <tbody>
-    //     <tr>
-    //       {
-    //         storeData.map((obj, i) => {
-    //           return (
-    //             <th key={i}>
-    //               {obj.description.map((detail, i) => {
-    //                 return (
-    //                   <div key={i}>{detail}</div>
-    //                 )
-    //               })}
-    //             </th>
-    //           )
-    //         })
-    //       }
-    //     </tr>
-    //   </tbody>
-    // </table>
   )
 }
 
