@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { GiVibratingSmartphone } from 'react-icons/gi';
+import { GiPencil } from 'react-icons/gi';
 import { AiOutlineSmile } from 'react-icons/ai';
 import { ClipLoader } from 'react-spinners';
-import './AppointmentForm.css';
+import './ReviewForm.css';
 
-const AppointmentForm = () => {
+const AppointmentForm = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [number, setNumber] = useState(1);
   const [service, setService] = useState('');
-  const [message, setMessage] = useState('');
+  const [review, setReview] = useState('');
   const [messageSent, setMessageSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleReviewSubmit = (e) => {
     // send information to backend 
     const data = {
       name: name,
       email: email,
-      number: number,
       service: service,
-      message: message,
+      review: review,
+      date: new Date(),
     }
+
     setLoading(true);
-    const url = `${process.env.REACT_APP_SERVER}/appointments`;
+    // send review to back end for db
+    const url = `${process.env.REACT_APP_SERVER}/reviews`; 
     fetch(url, {
       method: 'POST',
       headers: {
@@ -41,22 +42,40 @@ const AppointmentForm = () => {
         console.error('error:', error);
       });
 
+      // send text information to backend
+      const reviewUrl = `${process.env.REACT_APP_SERVER}/newReview`;
+      fetch(reviewUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch(error => {
+          console.error('error:', error)
+        })
+
+    props.handleFormClose();
+
     // reset state
     setName('');
     setEmail('');
-    setNumber(1);
     setService('');
-    setMessage('');
-    setMessageSent(true);
+    setReview('');
+    setMessageSent(false);
     setLoading(false);
   }
 
   return (
     <div className='form-container'>
-      <div className='contact-title-container'>
-        <GiVibratingSmartphone />
-        <h3 className='contact-title'>Get In Touch With Us</h3>
-        <p className='contact-description'>Leave us a message and we will get back to you as soon as possible!</p>
+      <div className={messageSent ? 'contact-title-container inactive' : 'contact-title-container'}>
+        <GiPencil />
+        <h3 className='contact-title'>Give Us Your Feedback</h3>
+        <p className='contact-description'>Tell us more about your experience and what we can improve on!</p>
       </div>
       <Form className={messageSent ? 'form-hidden' : 'form-show'}>
         <Form.Group className='form-input' required>
@@ -65,30 +84,27 @@ const AppointmentForm = () => {
         <Form.Group onChange={(e) => setEmail(e.target.value)} className='form-input'>
           <Form.Control type='email' placeholder='Email' />
         </Form.Group>
-        <Form.Group onChange={(e) => setNumber(e.target.value)} className='form-input' required>
-          <Form.Control type='phone' placeholder='Phone Number*' />
-        </Form.Group>
         <Form.Group onChange={(e) => setService(e.target.value)} className="form-input" required>
-          <Form.Select>
-            <option value='' selected disabled>select a service</option>
+          <Form.Select defaultValue=''>
+            <option value='' disabled>select a service</option>
             <option value='haircut'>Haircut</option>
             <option value='styling'>Styling</option>
             <option value='colour'>Colour</option>
             <option value='treatment'>Treatment</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group onChange={(e) => setMessage(e.target.value)} className='form-input'>
-          <textarea className='form-control' rows='8' placeholder='Message*' required></textarea>
+        <Form.Group onChange={(e) => setReview(e.target.value)} className='form-input'>
+          <textarea className='form-control' rows='8' placeholder='Add your Review*' required></textarea>
         </Form.Group>
       </Form>
       {
         loading ?
           <div className='loader'>
-            <ClipLoader/>
+            <ClipLoader />
           </div>
           :
           <div className={messageSent ? 'form-hidden' : 'form-show form-btn-container'}>
-            <Button id='form-btn' variant="dark" onClick={handleSubmit}>Send Message</Button>
+            <Button id='form-btn' variant="dark" onClick={handleReviewSubmit}>Submit Review</Button>
           </div>
       }
       <div className='submitted-container'>

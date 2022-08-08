@@ -56,6 +56,15 @@ Form {
   font-weight: 400;
 }
 
+.loader{
+  text-align: center;
+}
+
+.submitted-container{
+  border: 1px rgba(195, 195, 195, 0.585) solid;
+  margin-bottom: 90px;
+}
+
 @media (max-width: 650px) {
   .form-container {
     width: 100%;
