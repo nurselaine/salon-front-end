@@ -8,7 +8,6 @@ import AboutSection from './AboutSection';
 import AppointmentForm from './AppointmentForm';
 import ReviewForm from './ReviewForm';
 import Footer from './Footer';
-import { Link } from 'react-router-dom';
 import data from '../store_data.json';
 import { BsSuitHeart } from 'react-icons/bs';
 
