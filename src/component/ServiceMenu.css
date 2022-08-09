@@ -51,6 +51,14 @@ button.nav-link{
     width: 100%;
   }
 
+  .service-menu{
+    width: 90%;
+    margin: auto;
+  }
+
+  #uncontrolled-tab-example{
+    font-size: 0.6rem;
+  }
   .service-title{
     font-size: 2rem;
   }

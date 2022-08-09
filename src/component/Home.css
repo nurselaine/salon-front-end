@@ -240,7 +240,7 @@
 /* Tablet view */
 @media (max-width: 650px) {
   .home-splash{
-    height: 360px;
+    height: 390px;
   }
 
   .hero-title-container {
