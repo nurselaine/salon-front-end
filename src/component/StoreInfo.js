@@ -7,15 +7,15 @@ const StoreInfo = () => {
 
   return (
     <div className='store-data-container'>
-      {storeData.map(obj => {
+      {storeData.map((obj, i) => {
         return (
-          <div className='info-container'>
+          <div className='info-container' key={i}>
             <p className='title-container'>{obj.title}</p>
             <div className='details-container'>
             {
-              obj.description.map(string => {
+              obj.description.map((string, i) => {
                 return (
-                  <p>{string}</p>
+                  <p key={i}>{string}</p>
                 )
               })
             }

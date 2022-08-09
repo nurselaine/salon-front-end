@@ -91,6 +91,7 @@ const AppointmentForm = (props) => {
             <option value='styling'>Styling</option>
             <option value='colour'>Colour</option>
             <option value='treatment'>Treatment</option>
+            <option value='other'>Other - please specify below</option>
           </Form.Select>
         </Form.Group>
         <Form.Group onChange={(e) => setReview(e.target.value)} className='form-input'>

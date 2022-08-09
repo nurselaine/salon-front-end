@@ -31,6 +31,10 @@ li.foot{
   display: flex;
 }
 
+.social-icon-f{
+  color: black;
+}
+
 .git-container{
 
 }
