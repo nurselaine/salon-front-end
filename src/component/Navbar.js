@@ -10,7 +10,6 @@ const Navbar = () => {
   const [isShown, setIsShown] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  console.log(isShown);
   return (
     <div className={click ? 'header active' : 'header'}>
       <div 
@@ -28,10 +27,10 @@ const Navbar = () => {
             </li>
           </ul>
           <h2 className={isShown ? 'logo white' : 'logo'} href="#">
-            LOANN
+            <a href='#home-top' id='logo-link-n'>LOANN</a>        
           </h2>
           <div className='btn-container'>
-            <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/contact'>Book Appointment</Link>
+            <a className={isShown ? 'nav-link white' : 'nav-link'} id='link2book' href='#book-appt'>Book Appointment</a>
           </div>
 
           <div className='menu-icon' onClick={() => setClick(!click)}>
@@ -48,19 +47,19 @@ const Navbar = () => {
           <ul className={click ? "nav-options active" : "nav-options"}>
             <li className='option' onClick={closeMobileMenu}>
               {/* <p className='nav-link' href='#'>Home</p> */}
-              <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/'>Home</Link>
+              <a className={isShown ? 'nav-link white' : 'nav-link'} href='#home-top'>Home</a>
             </li>
             <li className='option' onClick={closeMobileMenu}>
-              {/* <p className='nav-link' href='#'>Gallery</p> */}
-              <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/gallery'>Gallery</Link>
+              {/* <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/gallery'>Gallery</Link> */}
+              <a className={isShown ? 'nav-link white' : 'nav-link'} href='#gallery'>Gallery</a>
             </li>
             <li className='option' onClick={closeMobileMenu}>
-              {/* <p className='nav-link' href='#'>Service menu</p> */}
-              <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/service-menu'>Service Menu</Link>
+              {/* <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/service-menu'>Service Menu</Link> */}
+              <a className={isShown ? 'nav-link white' : 'nav-link'} href='service-menu-2'>Service Menu</a>
             </li>
             <li className='option' onClick={closeMobileMenu}>
-              {/* <p className='nav-link' href='#'>Contact</p> */}
-              <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/contact'>Contact</Link>
+              {/* <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/contact'>Contact</Link> */}
+              <a className={isShown ? 'nav-link white' : 'nav-link'} href='#review'>Contact</a>
             </li>
           </ul>
 

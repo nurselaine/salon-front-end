@@ -41,6 +41,12 @@
       margin: 20px;
     }
 
+  #logo-link-n{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
   h2 {
     /* border: 1px red solid; */
     margin: auto;
@@ -85,10 +91,10 @@
       background-color: white;
     } */
 
-  a {
+  /* a {
     text-decoration: none;
     color: white;
-  }
+  } */
   
   /* .logo {
     width: 45px;

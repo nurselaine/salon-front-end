@@ -21,15 +21,15 @@ const Home = () => {
   }
 
   return (
-    <div className='home-container'>
+    <div id='home-top' className='home-container'>
       <div className='home-splash'>
         <div className='hero'>
           <div><Navbar className='nav-bar' /></div>
           <div className='hero-title-container'>
             <div className='hero-title'>It Doesn't Matter If Your Life is Perfect as Long as Your Hair Color is.</div>
             <div className='hero-btn-container'>
-              <Button id='book-btn' variant="outline-light"><Link className='nav-link' to='/contact'>BOOK APPOINTMENT</Link></Button>
-              <Button id='book-btn2' variant="light"><Link className='nav-link' to='/service-menu'>VIEW SERVICE MENU</Link></Button>
+              <Button id='book-btn' variant="outline-light"><a href='#book-appt' id='link2book'>BOOK APPOINTMENT</a></Button>
+              <Button id='book-btn2' variant="light"><a href='#service-menu-2' id='link2menu'>VIEW SERVICE MENU</a></Button>
             </div>
           </div>
           <div className='basic-info-container' >
@@ -37,13 +37,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section id='basic-info-section' >
+      <section id='basic-info-section'>
         <StoreInfo />
       </section>
-      <section className='service-menu-container'>
-        <ServiceMenu />
+      <section id='service-menu-2' className='service-menu-container'>
+        <ServiceMenu id='service-menu'/>
         <div id='service-btn-container'>
-          <Button id='book-btn3' variant="dark">BOOK APPOINTMENT</Button>
+          <Button id='book-btn3' variant="dark"><a href='#book-appt' id='link2book'>BOOK APPOINTMENT</a></Button>
         </div>
       </section>
       <section className='about-section-container'>
@@ -54,7 +54,7 @@ const Home = () => {
           title="Loann's Story"
           direction='row' />
       </section>
-      <section className='gallery-section'>
+      <section id='gallery' className='gallery-section'>
         <h1 className='gallery-title'>Gallery</h1>
         <div className='gallery-container'>
           <div className='div-1'></div>
@@ -65,7 +65,7 @@ const Home = () => {
           <div className='div-6'></div>
           <div className='div-7'></div>
         </div>
-        <div className='review-btn-container'>
+        <div id='review' className='review-btn-container'>
           <div className='review-info'>
             <BsSuitHeart />
             <BsSuitHeart />
@@ -75,7 +75,8 @@ const Home = () => {
             id='book-btn4'
             variant="outline-dark"
             onClick={() => { setShowReviewForm(true) }}
-          >ADD A REVIEW
+          >
+            ADD A REVIEW
           </Button>
           {
             showReviewForm &&
@@ -92,8 +93,8 @@ const Home = () => {
           title="Experience & Education"
           direction='row-reverse' />
       </section>
-      <section>
-        <AppointmentForm id='book-appt' />
+      <section id='book-appt' name='book-appt' >
+        <AppointmentForm />
       </section>
       <section id='basic-info-section2' >
         <StoreInfo />

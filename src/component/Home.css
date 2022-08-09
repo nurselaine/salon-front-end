@@ -56,6 +56,7 @@
 #book-btn:hover {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 #book-btn2 {
@@ -69,6 +70,17 @@
 #book-btn2:hover {
   background-color: transparent;
   color: white;
+  cursor: pointer;
+}
+#link2book{
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+#link2menu{
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
 }
 
 .basic-info-container {
