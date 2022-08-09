@@ -55,7 +55,7 @@ const Navbar = () => {
             </li>
             <li className='option' onClick={closeMobileMenu}>
               {/* <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/service-menu'>Service Menu</Link> */}
-              <a className={isShown ? 'nav-link white' : 'nav-link'} href='service-menu-2'>Service Menu</a>
+              <a className={isShown ? 'nav-link white' : 'nav-link'} href='#service-menu-2'>Service Menu</a>
             </li>
             <li className='option' onClick={closeMobileMenu}>
               {/* <Link className={isShown ? 'nav-link white' : 'nav-link'} to='/contact'>Contact</Link> */}
