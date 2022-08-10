@@ -14,6 +14,16 @@ const AppointmentForm = () => {
   const [message, setMessage] = useState('');
   const [messageSent, setMessageSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState(false);
+
+  const handleErrors = () => {
+
+    if(number === '' || service === '' || name === ''){
+      setErrors(true);
+    } else {
+      handleSubmit();
+    }
+  }
 
   const handleSubmit = (e) => {
     // send information to backend 
@@ -24,24 +34,26 @@ const AppointmentForm = () => {
       service: service,
       message: message,
     }
-    setLoading(true);
-    const url = `${process.env.REACT_APP_SERVER}/appointments`;
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error('error:', error);
-      });
 
-    // reset state
+      setLoading(true);
+      const url = `${process.env.REACT_APP_SERVER}/appointments`;
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error('error:', error);
+        });
+
+
+       // reset state
     setName('');
     setEmail('');
     setNumber(1);
@@ -49,6 +61,7 @@ const AppointmentForm = () => {
     setMessage('');
     setMessageSent(true);
     setLoading(false);
+
   }
 
   return (
@@ -63,14 +76,14 @@ const AppointmentForm = () => {
           <Form.Control onChange={(e) => setName(e.target.value)} type='name' placeholder='Name*' />
         </Form.Group>
         <Form.Group onChange={(e) => setEmail(e.target.value)} className='form-input'>
-          <Form.Control type='email' placeholder='Email' />
+          <Form.Control type='email' placeholder='Email*' />
         </Form.Group>
         <Form.Group onChange={(e) => setNumber(e.target.value)} className='form-input' required>
           <Form.Control type='phone' placeholder='Phone Number*' />
         </Form.Group>
         <Form.Group onChange={(e) => setService(e.target.value)} className="form-input" required>
           <Form.Select>
-            <option value='' selected disabled>select a service</option>
+            <option value='' selected disabled>select a service*</option>
             <option value='haircut'>Haircut</option>
             <option value='styling'>Styling</option>
             <option value='colour'>Colour</option>
@@ -88,7 +101,11 @@ const AppointmentForm = () => {
           </div>
           :
           <div className={messageSent ? 'form-hidden' : 'form-show form-btn-container'}>
-            <Button id='form-btn' variant="dark" onClick={handleSubmit}>Send Message</Button>
+            <Button id='form-btn' variant="dark" onClick={handleErrors}>Send Message</Button>
+            {errors &&
+             <div className='error-msg'>Please add all REQUIRED* feilds</div>
+            }
+            
           </div>
       }
       <div className='submitted-container'>

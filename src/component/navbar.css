@@ -8,10 +8,6 @@
     height:auto;
     width: 100%;
   }
-    /* .header:hover{
-      background-color: white;
-      color: black;
-    } */
 
 #hover-active{
   background-color: #f5e1d3;
@@ -24,10 +20,7 @@
     border-bottom: 1px rgba(195, 195, 195, 0.231) solid;
     /* border: 1px red solid; */
   }
-    /* .top-nav:hover{
-      color: black;
-      border-bottom: 1px gray solid;
-    } */
+
 
   .social-container {
     display: flex;
@@ -39,6 +32,10 @@
   }
     .social-icon{
       margin: 20px;
+      color: white;
+    }
+    .social-icon.active{
+      color: black;
     }
 
   #logo-link-n{
@@ -67,10 +64,11 @@
         color: gray;
       }
   
+  #link2book-nav{
+    color: black;
+  }
 
   .btn-container{
-    /* background-color: transparent; */
-    /* flex-direction: end; */
     padding-right: 50px;
     margin-top: 25px;
     margin-bottom: auto;
@@ -85,32 +83,13 @@
     border-bottom: 1px rgba(195, 195, 195, 0.231) solid;
     color: white;
   }
-    /* .nav-container:hover {
-      color: black;
-      border-bottom: 1px gray solid;
-      background-color: white;
-    } */
 
-  /* a {
-    text-decoration: none;
-    color: white;
-  } */
-  
-  /* .logo {
-    width: 45px;
-    height: 45px;
-  } */
-  
   .nav-options {
     padding-left: 25px;
     display: flex;
     list-style-type: none;
     margin-bottom: 10px;
-
   }
-    /* .nav-options:hover{
-      color:black;
-    } */
 
   .nav-link{
     color: white;
@@ -124,7 +103,18 @@
   
   .option {
     padding: 0px 25px;
+    /* font-size: 1.5rem;
+    margin: 10px 0px;
+    border-bottom: gray 1px solid;
+    padding-bottom: 10px; */
   }
+    .option.active{
+      padding: 0px 25px;
+      font-size: 1.5rem;
+      margin: 10px 0px;
+      border-bottom: gray 1px solid;
+      padding-bottom: 10px;
+    }
   
   .mobile-menu {
     display: none;
@@ -148,16 +138,21 @@
     width: 100%;
   }
 
+  .nav-link{
+    color: black;
+    font-size: 1.5rem;
+  }
+
   #hover-active{
     background-color: transparent;
   }
 
-  .top-nav.active {
-    background-color: white;
-    color: black;
-  }
-    .top-nav{
+  .top-nav{
       border-bottom: none;
+      color: white;
+    }
+    .top-nav.active{
+      background-color: inherit;
     }
 
   .social-container{
@@ -169,15 +164,16 @@
   }
 
   h2.logo {
-    width: 45px;
-    height: 45px;
-    padding:0;
+    margin: auto;
+    padding-left: 60px;
+    font-size: 2rem;
+    font-stretch: narrower;
   }
   
 
   .nav-container{
     border-bottom: none;
-    margin-top: inherit;
+    /* margin-top: inherit; */
   }
 
   .nav-options {
@@ -209,9 +205,15 @@
     margin-right: 10px;
     margin-top: 10px;
   }
+    .manu-icon.active{
+      color: black;
+    }
     svg.nav-icon{
-      height: 45px;
-      width: 45px;
+      height: 30px;
+      width: 30px;
+    }
+    svg.nav-icon.active{
+      color: black;
     }
 }
 
@@ -224,8 +226,8 @@
   }
 
   .top-nav.active {
-    background-color: white;
-    color: black;
+    background-color: inherit;
+    color: inherit;
   }
     .top-nav{
       color: white;
@@ -247,12 +249,13 @@
     margin-top: 20px;
   }
     .logo.white{
-      color: white;
+      color: inherit;
     }
 
   .nav-container{
     border-bottom: none;
-    margin-top: inherit;
+    padding-bottom: 10px;
+    /* margin-top: inherit; */
   }
 
   .nav-options {

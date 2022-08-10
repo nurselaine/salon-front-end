@@ -40,7 +40,7 @@ const Home = () => {
         <StoreInfo />
       </section>
       <section id='service-menu-2' className='service-menu-container'>
-        <ServiceMenu id='service-menu'/>
+        <ServiceMenu id='service-menu' />
         <div id='service-btn-container'>
           <Button id='book-btn3' variant="dark"><a href='#book-appt' id='link2book'>BOOK APPOINTMENT</a></Button>
         </div>
@@ -79,7 +79,16 @@ const Home = () => {
           </Button>
           {
             showReviewForm &&
-              <ReviewForm handleFormClose={closeReviewForm}/>
+            <>
+              <ReviewForm handleFormClose={closeReviewForm} />
+              <Button
+                id='book-btn4'
+                variant="outline-dark"
+                onClick={() => { setShowReviewForm(false) }}
+              >
+                cancel
+              </Button>
+            </>
           }
         </div>
       </section>
@@ -99,7 +108,7 @@ const Home = () => {
         <StoreInfo />
       </section>
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   )

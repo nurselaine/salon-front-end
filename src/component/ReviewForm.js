@@ -13,6 +13,16 @@ const AppointmentForm = (props) => {
   const [review, setReview] = useState('');
   const [messageSent, setMessageSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState(false);
+
+  const handleErrors = () => {
+
+    if(email === '' || service === '' || name === '' ||review === ''){
+      setErrors(true);
+    } else {
+      handleReviewSubmit();
+    }
+  }
 
   const handleReviewSubmit = (e) => {
     // send information to backend 
@@ -105,7 +115,10 @@ const AppointmentForm = (props) => {
           </div>
           :
           <div className={messageSent ? 'form-hidden' : 'form-show form-btn-container'}>
-            <Button id='form-btn' variant="dark" onClick={handleReviewSubmit}>Submit Review</Button>
+            <Button id='form-btn' variant="dark" onClick={handleErrors}>Submit Review</Button>
+            {errors &&
+             <div className='error-msg'>Please add all REQUIRED* feilds</div>
+            }
           </div>
       }
       <div className='submitted-container'>
